@@ -1,0 +1,163 @@
+/* Apply Poppins Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    color: #2c9f45;
+}
+
+.login {
+    color: #2c9f45;
+}
+
+.join-us {
+    background-color: #96BB7C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.join-us:hover {
+    background-color: #27973e;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.text-content {
+    margin-bottom: 40px;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Adjust gap and width to bring boxes closer */
+.team-cards {
+    display: flex;
+    justify-content: space-evenly; /* Evenly space out the cards */
+    gap: 2px; /* Reduced gap between cards */
+    max-width: 900px; /* Limit the container width to bring cards closer */
+    margin: 0 auto; /* Center the container */
+}
+
+.card {
+    background-color: #96BB7C;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 280px; /* Keep the card size reasonable */
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.card .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+}

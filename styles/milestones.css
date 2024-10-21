@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    color: #2c9f45;
+}
+
+.join-us {
+    background-color: #96BB7C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.join-us:hover {
+    background-color: #27973e;
+}
+
+/* Milestones Section */
+.milestones-section {
+    padding: 50px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.milestones-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.timeline-intro {
+    font-size: 1.2rem;
+    color: #2c9f45;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    border-left: 2px solid #333;
+    transition: border-color 0.3s ease;
+}
+
+/* Change timeline border color when hovering over a timeline-event */
+.timeline-event:hover ~ .timeline {
+    border-left: 2px solid #2c9f45; /* Change the timeline outline to green */
+}
+
+.timeline-event {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 40px; /* Shift content more to the left */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.timeline-event:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Date */
+.timeline-date {
+    position: absolute;
+    right: -140px; /* Move date box to the right */
+    top: 0;
+    font-size: 0.8rem;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-event:hover .timeline-date {
+    background-color: #2c9f45; /* Change color of the date on hover */
+    transform: scale(1.1); /* Slightly enlarge the date on hover */
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.timeline-event:hover h3 {
+    color: #2c9f45; /* Change the event title color on hover */
+}
+
+.timeline-content p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Timeline Dot */
+.timeline-event::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 3px solid #333;
+    transform: rotate(45deg); /* Create diamond shape */
+    border-radius: 3px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-event:hover::before {
+    background-color: #2c9f45; /* Change color of the dot on hover */
+    transform: rotate(45deg) scale(1.2); /* Slightly enlarge the dot */
+}
+
+/* Timeline Line */
+.timeline-event::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #333;
+    z-index: -1; /* Place behind the event */
+    transition: background-color 0.3s ease;
+}
+
+.timeline-event:hover::after {
+    background-color: #2c9f45; /* Change the color of the vertical line when hovering over an event */
+}
+
+/* Prevent glitch with the "typing mark" */
+.timeline-event:hover::after {
+    height: 100%; /* Ensure the line stays full height and does not shrink */
+    transition: none; /* Remove unwanted animations that cause glitches */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-event {
+        padding-left: 40px;
+    }
+
+    .timeline-date {
+        right: -90px;
+    }
+
+    .timeline-event::before {
+        left: -25px;
+    }
+}

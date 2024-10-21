@@ -1,0 +1,143 @@
+/* Apply Poppins Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    color: #2c9f45;
+}
+
+.join-us {
+    background-color: #96BB7C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.join-us:hover {
+    background-color: #27973e;
+}
+
+/* Documents Section Styling */
+.documents-section {
+    padding: 50px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.documents-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.documents-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.documents-content p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.document-category h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Document List and Box Styling */
+.document-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.document-box {
+    background-color: #96BB7C;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 180px; /* Ensure all boxes have the same width */
+    min-height: 100px; /* Ensure all boxes have the same height */
+}
+
+.document-box:hover {
+    background-color: #96BB7C;
+    color: white;
+}
+
+.document-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .documents-section {
+        padding: 30px;
+    }
+
+    .documents-content h2 {
+        font-size: 2rem;
+    }
+
+    .document-box {
+        width: 100%; /* Full width on mobile devices */
+    }
+}
